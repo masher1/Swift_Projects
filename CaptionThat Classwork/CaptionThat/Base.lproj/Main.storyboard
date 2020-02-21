@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Ne-Ju-Ub2">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="6Jh-ze-ksS">
+            <objects>
+                <navigationController id="1Ne-Ju-Ub2" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gZW-hA-Zwz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="PIF-pr-k7B" kind="relationship" relationship="rootViewController" id="wA4-qr-PzQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lgh-CM-5vK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1012" y="-238"/>
+        </scene>
+        <!--Landing View Controller-->
+        <scene sceneID="LVq-Un-fZW">
+            <objects>
+                <viewController id="PIF-pr-k7B" customClass="LandingViewController" customModule="CaptionThat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DoC-Nc-DFj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXa-3b-D1X">
+                                <rect key="frame" x="118" y="373" width="179" height="151"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Image Gallery"/>
+                                <connections>
+                                    <action selector="handleUserDidTapImageGallery:" destination="PIF-pr-k7B" eventType="touchUpInside" id="eMo-3f-nCe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gig-61-31Z">
+                                <rect key="frame" x="123" y="254" width="168" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="D48-kN-dqc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9Z9-gf-K2T"/>
+                    <connections>
+                        <outlet property="authorLabel" destination="gig-61-31Z" id="aCj-Fv-6y8"/>
+                        <segue destination="7qO-XH-brd" kind="show" identifier="LandingToCaptionViewSegue" id="XIB-Cq-zfi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B23-wd-Syz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-142.02898550724638" y="-238.39285714285714"/>
+        </scene>
+        <!--Caption View Controller-->
+        <scene sceneID="VDD-Eo-jBu">
+            <objects>
+                <viewController id="7qO-XH-brd" customClass="CaptionViewController" customModule="CaptionThat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AA2-0u-hU3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="01t-Oj-HXd">
+                                <rect key="frame" x="20" y="269" width="374" height="358"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VkX-mZ-E56">
+                                <rect key="frame" x="0.0" y="108" width="414" height="112.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caption" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lL-Oa-ng4">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="25.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GL9-sJ-cJM">
+                                        <rect key="frame" x="0.0" y="35.5" width="414" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ypr-zK-dDV">
+                                        <rect key="frame" x="0.0" y="79.5" width="131" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Set Default Label"/>
+                                        <connections>
+                                            <action selector="setDefaultLabelText:" destination="7qO-XH-brd" eventType="touchUpInside" id="xb0-3S-URf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="GL9-sJ-cJM" secondAttribute="trailing" id="WD8-pG-9E3"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="VkX-mZ-E56" firstAttribute="top" secondItem="QXh-cB-9HZ" secondAttribute="top" constant="20" id="Y9V-HR-j0C"/>
+                            <constraint firstItem="VkX-mZ-E56" firstAttribute="leading" secondItem="QXh-cB-9HZ" secondAttribute="leading" id="k25-3a-GXI"/>
+                            <constraint firstItem="QXh-cB-9HZ" firstAttribute="trailing" secondItem="VkX-mZ-E56" secondAttribute="trailing" id="kgj-oB-lsr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QXh-cB-9HZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wxf-5L-QI2"/>
+                    <connections>
+                        <outlet property="captionTextField" destination="GL9-sJ-cJM" id="PwJ-AY-ckn"/>
+                        <outlet property="captionValueLabel" destination="7lL-Oa-ng4" id="FFr-lO-rhw"/>
+                        <outlet property="userImageView" destination="01t-Oj-HXd" id="4yf-yk-ZJt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OzJ-rv-cV6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="634.78260869565224" y="-238.39285714285714"/>
+        </scene>
+    </scenes>
+</document>
