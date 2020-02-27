@@ -19,7 +19,7 @@ class CaptionViewController: UIViewController, UITextFieldDelegate {
         captionTextField.delegate = self
     }
     
-    
+    	
     /// Calls the `LandingToCaptionedSegue` with the Picture as an argument
     func initalizeCaptionView(with picture: Picture) {
         /// make sure identifier matches the value you set in  Main.Storyboard
