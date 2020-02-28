@@ -69,12 +69,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="01t-Oj-HXd">
-                                <rect key="frame" x="20" y="269" width="374" height="358"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VkX-mZ-E56">
-                                <rect key="frame" x="0.0" y="108" width="414" height="112.5"/>
+                                <rect key="frame" x="0.0" y="108" width="414" height="482.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caption" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lL-Oa-ng4">
                                         <rect key="frame" x="0.0" y="0.0" width="72" height="25.5"/>
@@ -95,9 +91,21 @@
                                             <action selector="setDefaultLabelText:" destination="7qO-XH-brd" eventType="touchUpInside" id="xb0-3S-URf"/>
                                         </connections>
                                     </button>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="01t-Oj-HXd">
+                                        <rect key="frame" x="0.0" y="122.5" width="360" height="360"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="01t-Oj-HXd" secondAttribute="height" multiplier="1:1" id="sIC-43-Via"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="paF-B2-3hy" appends="YES" id="hKX-rq-UxG"/>
+                                        </connections>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="GL9-sJ-cJM" secondAttribute="trailing" id="WD8-pG-9E3"/>
+                                    <constraint firstItem="01t-Oj-HXd" firstAttribute="top" secondItem="Ypr-zK-dDV" secondAttribute="bottom" constant="51" id="fMP-Su-yue"/>
+                                    <constraint firstAttribute="trailing" secondItem="01t-Oj-HXd" secondAttribute="trailing" constant="54" id="plG-Sb-OeW"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -113,12 +121,20 @@
                     <connections>
                         <outlet property="captionTextField" destination="GL9-sJ-cJM" id="PwJ-AY-ckn"/>
                         <outlet property="captionValueLabel" destination="7lL-Oa-ng4" id="FFr-lO-rhw"/>
-                        <outlet property="userImageView" destination="01t-Oj-HXd" id="4yf-yk-ZJt"/>
+                        <outlet property="photoImageView" destination="01t-Oj-HXd" id="IuS-cN-RVx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OzJ-rv-cV6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="paF-B2-3hy">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="7qO-XH-brd" id="qjj-5B-GhD"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="634.78260869565224" y="-238.39285714285714"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="defaultPhoto" width="320" height="320"/>
+    </resources>
 </document>
