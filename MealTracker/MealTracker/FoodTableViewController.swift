@@ -40,7 +40,11 @@ class FoodTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell", for: indexPath)
+<<<<<<< HEAD
         
+=======
+  
+>>>>>>> d11ad83d0936b39b9a47310eb82958f8c56a9ea4
         cell.textLabel?.text = meals[indexPath.section].foods[indexPath.row].name
         cell.detailTextLabel?.text = meals[indexPath.section].foods[indexPath.row].description
         return cell

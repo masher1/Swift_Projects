@@ -6,15 +6,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+<<<<<<< HEAD
         <!--Emoji Dictionary-->
         <scene sceneID="MuU-0r-bVx">
             <objects>
                 <tableViewController title="Emoji Dictionary" id="9Dm-hq-xY4" customClass="EmojiTableViewController" customModule="EmojiDictionary" customModuleProvider="target" sceneMemberID="viewController">
+=======
+        <!--Root View Controller-->
+        <scene sceneID="MuU-0r-bVx">
+            <objects>
+                <tableViewController id="9Dm-hq-xY4" customClass="EmojiTableViewController" customModule="EmojiDictionary" customModuleProvider="target" sceneMemberID="viewController">
+>>>>>>> d11ad83d0936b39b9a47310eb82958f8c56a9ea4
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Cfb-rK-zlG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
+<<<<<<< HEAD
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EmojiCell" id="M3w-Mb-Omn" customClass="EmojiTableViewCell" customModule="EmojiDictionary" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="57.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -79,6 +87,31 @@
                                     <outlet property="symbolLabel" destination="AFz-Vb-Gv1" id="HGc-uM-OUc"/>
                                     <segue destination="8cL-Re-uJ7" kind="presentation" identifier="EditEmoji" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="gwI-6Z-0go"/>
                                 </connections>
+=======
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EmojiCell" textLabel="WFw-zL-9cs" detailTextLabel="vLf-oz-FuA" style="IBUITableViewCellStyleSubtitle" id="M3w-Mb-Omn">
+                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="M3w-Mb-Omn" id="8zm-1G-YJp">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WFw-zL-9cs">
+                                            <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vLf-oz-FuA">
+                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+>>>>>>> d11ad83d0936b39b9a47310eb82958f8c56a9ea4
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -86,21 +119,29 @@
                             <outlet property="delegate" destination="9Dm-hq-xY4" id="2MR-aE-IsM"/>
                         </connections>
                     </tableView>
+<<<<<<< HEAD
                     <navigationItem key="navigationItem" title="Emoji Dictionary" id="XdL-ck-a0N">
+=======
+                    <navigationItem key="navigationItem" title="Root View Controller" id="XdL-ck-a0N">
+>>>>>>> d11ad83d0936b39b9a47310eb82958f8c56a9ea4
                         <barButtonItem key="leftBarButtonItem" title="Edit" id="hf0-ld-bw5">
                             <connections>
                                 <action selector="editButtonTapped:" destination="9Dm-hq-xY4" id="1Lp-m0-oSa"/>
                             </connections>
                         </barButtonItem>
+<<<<<<< HEAD
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="MLw-dS-Bq2">
                             <connections>
                                 <segue destination="8cL-Re-uJ7" kind="presentation" id="UFv-Tp-Dbw"/>
                             </connections>
                         </barButtonItem>
+=======
+>>>>>>> d11ad83d0936b39b9a47310eb82958f8c56a9ea4
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h4c-ni-jUO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="476.81159420289856" y="182.8125"/>
         </scene>
         <!--Root View Controller-->
@@ -270,6 +311,9 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KPh-Ce-Tth" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1343" y="183"/>
+=======
+            <point key="canvasLocation" x="478" y="183"/>
+>>>>>>> d11ad83d0936b39b9a47310eb82958f8c56a9ea4
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rpo-mq-TXb">
@@ -288,7 +332,10 @@
             <point key="canvasLocation" x="-437" y="184"/>
         </scene>
     </scenes>
+<<<<<<< HEAD
     <inferredMetricsTieBreakers>
         <segue reference="UFv-Tp-Dbw"/>
     </inferredMetricsTieBreakers>
+=======
+>>>>>>> d11ad83d0936b39b9a47310eb82958f8c56a9ea4
 </document>
